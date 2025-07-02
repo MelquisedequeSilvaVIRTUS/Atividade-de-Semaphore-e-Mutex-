@@ -611,6 +611,7 @@ void StartTaskSend(void *argument)
 
 	char str[100];
 	snprintf(str, 100, "Media dos valores obtidos = %lf", med);
+	HAL_UART_Transmit(&huart3, (uint8_t*) str, strlen(str),100);
 
     osDelay(100);
   }
